@@ -1,0 +1,141 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ff85c0; /* More pinkish background */
+    text-align: center;
+    color: #fff; /* White text color for better visibility */
+    padding: 50px;
+    overflow: hidden; /* Prevent scrollbars from appearing due to falling hearts */
+    position: relative; /* Ensure hearts are on the background */
+    height: 100vh; /* Make sure the background fills the entire screen */
+    margin: 0; /* Remove default margins */
+}
+
+/* Falling heart animation */
+@keyframes fallHeart {
+    0% {
+        top: -50px;
+        opacity: 1;
+    }
+    100% {
+        top: 100%;
+        opacity: 0;
+    }
+}
+
+.heart {
+    position: absolute;
+    font-size: 30px;
+    color: #ff69b4; /* More pinkish hearts */
+    animation: fallHeart 5s ease-in infinite;
+    pointer-events: none; /* Prevent hearts from blocking interaction */
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative; /* Ensure hearts float over the content */
+    z-index: 10;
+}
+
+h1.title {
+    color: #fff; /* White title for better visibility */
+    font-size: 3rem;
+    font-family: 'Verdana', sans-serif;
+    margin-bottom: 30px;
+}
+
+.start-button {
+    background-color: #ff69b4; /* More pinkish button */
+    color: white;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Verdana', sans-serif;
+}
+
+.start-button:hover {
+    background-color: #ff85c0; /* Lighter pink on hover */
+}
+
+.quiz-container {
+    display: none;
+    margin-top: 20px;
+}
+
+.final-message {
+    display: none;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #fff; /* White final message for better visibility */
+    font-family: 'Verdana', sans-serif;
+}
+
+/* Styling for input fields and buttons */
+input {
+    padding: 8px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 80%;
+    max-width: 300px;
+    display: block; /* Ensure input fields are displayed on separate lines */
+    margin-left: auto; /* Center the input fields */
+    margin-right: auto; /* Center the input fields */
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff69b4; /* More pinkish button */
+    color: white;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff85c0; /* Lighter pink on hover */
+}
+
+/* Style for heart container - ensures hearts appear in the background */
+#heartContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Ensure hearts are behind the content */
+}
+
+/* Full-screen countdown */
+.countdown {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    z-index: 1000;
+}
+
+/* Full-screen video */
+#journeyVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1001;
+    background-color: #000;
+}

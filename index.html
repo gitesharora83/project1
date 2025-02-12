@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Love Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="heartContainer"></div>
+    
+    <div class="container">
+        <h1 class="title">💖 Happy Valentine's Day Motu 💖</h1>
+        
+        <div id="nameInputContainer">
+            <label for="name1">Enter your name:</label>
+            <input type="text" id="name1">
+            <label for="name2">Enter your partner's name:</label>
+            <input type="text" id="name2">
+            <button class="start-button" id="startButton">Start Quiz</button>
+        </div>
+        
+        <div id="quizContainer" class="quiz-container">
+            <div id="quizQuestions"></div>
+            <input type="text" id="responseInput" placeholder="Your answer...">
+            <button id="submitResponseButton">Submit Answer</button>
+        </div>
+
+        <div id="finalMessage" class="final-message"></div>
+        <div id="countdown" class="countdown" style="display: none;"></div> <!-- Countdown element -->
+        <video id="journeyVideo" width="600" controls style="display: none;">
+            <source src="journey-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video> <!-- Video element -->
+    </div>
+
+    <audio id="backgroundMusic" src="background-music.mp3" loop></audio> <!-- Add background music -->
+    <button id="playMusicButton" style="display: none;">Play Music</button> <!-- Hidden play button -->
+
+    <script src="script.js"></script>
+</body>
+</html>
